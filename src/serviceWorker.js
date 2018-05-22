@@ -2,7 +2,7 @@
 var cacheName = 'Pomodoro-PWA-cache-kw';
 
 // Default files to always cache
-var cacheFiles = ['/', '/css/style.css', '/js/script.js', '/img/tomato512.png', 'https://fonts.googleapis.com/css?family=Archivo+Narrow']
+var cacheFiles = ['/', 'css/style.css', 'js/script.js', 'img/tomato512.png', 'https://fonts.googleapis.com/css?family=Archivo+Narrow']
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Installed');
