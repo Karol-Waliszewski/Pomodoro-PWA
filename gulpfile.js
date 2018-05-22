@@ -55,6 +55,7 @@ gulp.task('watch', () => {
   gulp.watch(`${srcDir}/sass/**/*.scss`, ['css']);
   gulp.watch(`${srcDir}/js/**/*.js`, ['js']);
   gulp.watch(`${srcDir}/**/*.html`, ['html']);
+  gulp.watch(`${srcDir}/*.*`, ['copy']);
   gulp.watch(`${srcDir}/img/**/*.+(jpg|jpeg|png|svg|gif)`, ['img']);
   gulp.watch(`${srcDir}/**/*.+(html|js)`).on('change', browserSync.reload);
 });
