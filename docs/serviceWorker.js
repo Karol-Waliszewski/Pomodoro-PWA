@@ -1,8 +1,12 @@
 // Set a name for the current cache
 var cacheName = 'Pomodoro-PWA-cache-kw';
+var githubPages = 'Pomodoro-PWA';
 
 // Default files to always cache
-var cacheFiles = ['/', 'css/style.css', 'js/script.js', 'img/tomato512.png', 'https://fonts.googleapis.com/css?family=Archivo+Narrow']
+if (!githubPages)
+  var cacheFiles = ['/', 'css/style.css', 'js/script.js', 'img/tomato512.png', 'https://fonts.googleapis.com/css?family=Archivo+Narrow']
+else
+  var cacheFiles = [`/${githubPages}/`, `/${githubPages}/css/style.css`, `/${githubPages}/js/script.js`, `/${githubPages}img/tomato512.png`, 'https://fonts.googleapis.com/css?family=Archivo+Narrow']
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Installed');
